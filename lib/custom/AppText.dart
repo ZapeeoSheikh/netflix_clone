@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 
 class AppText extends StatelessWidget {
   String title;
-  Color color = Colors.white;
-  FontWeight weight = FontWeight.normal;
-  AppText(this.title, this.color);
+  Color? color;
+  double? size;
+  FontWeight? weight = FontWeight.normal;
+  AppText(this.title, {this.size = 17, this.color = Colors.white});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +13,8 @@ class AppText extends StatelessWidget {
       title,
       style: TextStyle(
         color: color,
-        fontWeight: weight;
+        fontSize: size,
+        fontWeight: weight,
       ),
     );
   }
