@@ -1,8 +1,11 @@
-# netflix_clone
+# Netflix Clone Project
 
 A new Flutter project.
 
 ![Screenshot (94)](https://user-images.githubusercontent.com/77886136/164340853-d338aced-87bf-4413-8641-fbd89e3e5ed4.png)
+
+### Day 01 Completed
+![Screenshot (96)](https://user-images.githubusercontent.com/77886136/164565712-bc6630c7-cbd1-446d-91b5-c38feaa63b4b.png)
 
 
 ## Getting Started
