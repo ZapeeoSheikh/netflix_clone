@@ -9,12 +9,17 @@ class HomePage extends StatelessWidget {
       home: Scaffold(
         body: Column(
           children: [
-            Row(
+            Stack(
               children: [
-                Container(),
-                Expanded(child: Container()),
-                Icon(Icons.search),
-                Container(),
+                Row(
+                  children: [
+                    Container(),
+                    Expanded(child: Container()),
+                    Icon(Icons.search),
+                    Container(),
+                  ],
+                ),
+                Row(),
               ],
             ),
           ],
