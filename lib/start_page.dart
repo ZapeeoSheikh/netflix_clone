@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:netflix_clone/custom/home_container.dart';
 
 class StartPage extends StatefulWidget {
   const StartPage({Key? key}) : super(key: key);
@@ -54,14 +55,7 @@ class _StartPageState extends State<StartPage> {
                 children: [
                   Column(
                     children: [
-                      Container(
-                        height: 110,
-                        width: 120,
-                        decoration: BoxDecoration(
-                          color: Colors.red,
-                          borderRadius: BorderRadius.circular(5),
-                        ),
-                      ),
+                      HomeContainer(),
                       SizedBox(
                         height: 10,
                       ),
@@ -76,14 +70,7 @@ class _StartPageState extends State<StartPage> {
                   ),
                   Column(
                     children: [
-                      Container(
-                        height: 110,
-                        width: 120,
-                        decoration: BoxDecoration(
-                          color: Colors.red,
-                          borderRadius: BorderRadius.circular(5),
-                        ),
-                      ),
+                      HomeContainer(),
                       SizedBox(
                         height: 10,
                       ),
@@ -105,14 +92,7 @@ class _StartPageState extends State<StartPage> {
                 children: [
                   Column(
                     children: [
-                      Container(
-                        height: 110,
-                        width: 120,
-                        decoration: BoxDecoration(
-                          color: Colors.red,
-                          borderRadius: BorderRadius.circular(5),
-                        ),
-                      ),
+                      HomeContainer(),
                       SizedBox(
                         height: 10,
                       ),
@@ -127,14 +107,7 @@ class _StartPageState extends State<StartPage> {
                   ),
                   Column(
                     children: [
-                      Container(
-                        height: 110,
-                        width: 120,
-                        decoration: BoxDecoration(
-                          color: Colors.red,
-                          borderRadius: BorderRadius.circular(5),
-                        ),
-                      ),
+                      HomeContainer(),
                       SizedBox(
                         height: 10,
                       ),
@@ -156,14 +129,7 @@ class _StartPageState extends State<StartPage> {
                 children: [
                   Column(
                     children: [
-                      Container(
-                        height: 110,
-                        width: 120,
-                        decoration: BoxDecoration(
-                          color: Colors.red,
-                          borderRadius: BorderRadius.circular(5),
-                        ),
-                      ),
+                      HomeContainer(),
                       SizedBox(
                         height: 10,
                       ),
@@ -178,14 +144,7 @@ class _StartPageState extends State<StartPage> {
                   ),
                   Column(
                     children: [
-                      Container(
-                        height: 110,
-                        width: 120,
-                        decoration: BoxDecoration(
-                          color: Colors.red,
-                          borderRadius: BorderRadius.circular(5),
-                        ),
-                      ),
+                      HomeContainer(),
                       SizedBox(
                         height: 10,
                       ),

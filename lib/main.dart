@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:netflix_clone/homepage.dart';
+import 'package:netflix_clone/routes/routes.dart';
 import 'package:netflix_clone/start_page.dart';
 
 void main() {
@@ -12,6 +14,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      routes: {
+        routes.start: (context) => StartPage(),
+        routes.home: (context) => HomePage(),
+      },
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: StartPage(),
