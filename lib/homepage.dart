@@ -16,7 +16,11 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark(),
+      theme: ThemeData.dark().copyWith(
+          bottomNavigationBarTheme: BottomNavigationBarThemeData(
+              backgroundColor: Colors.black,
+              selectedItemColor: Colors.white,
+              unselectedItemColor: Colors.grey)),
       home: Scaffold(
         backgroundColor: Colors.black,
         bottomNavigationBar: BottomNavigationBar(
