@@ -119,7 +119,7 @@ class _HomePageState extends State<HomePage> {
                                   width: 40,
                                 ),
                                 AppText(
-                                  "Movie",
+                                  "Movies",
                                 ),
                                 SizedBox(
                                   width: 40,
@@ -127,9 +127,157 @@ class _HomePageState extends State<HomePage> {
                                 AppText(
                                   "Categories",
                                 ),
-                                Icon(Icons.arrow_drop_down),
+                                SizedBox(
+                                  width: 5,
+                                ),
+                                IconButton(
+                                  onPressed: () {},
+                                  icon: Icon(Icons.arrow_drop_down),
+                                ),
                               ],
                             ),
+                          ),
+                          Expanded(child: Container()),
+                          Row(
+                            children: [
+                              Expanded(child: Container()),
+                              AppText(
+                                "Quickly   ",
+                                size: 10,
+                              ),
+                              AppText(
+                                "🔵",
+                                size: 4,
+                              ),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              AppText(
+                                "Hearfelt   ",
+                                size: 10,
+                              ),
+                              AppText(
+                                "🔵",
+                                size: 4,
+                              ),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              AppText(
+                                "Teen   ",
+                                size: 10,
+                              ),
+                              AppText(
+                                "🔵",
+                                size: 4,
+                              ),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              AppText(
+                                "Ensemble   ",
+                                size: 10,
+                              ),
+                              AppText(
+                                "🔵",
+                                size: 4,
+                              ),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              AppText(
+                                "Underdog   ",
+                                size: 10,
+                              ),
+                              AppText(
+                                "🔵",
+                                size: 4,
+                              ),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              AppText(
+                                "TV   ",
+                                size: 10,
+                              ),
+                              Expanded(child: Container()),
+                            ],
+                          ), //================== Tags
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Row(
+                            children: [
+                              Expanded(child: Container()),
+                              Column(
+                                children: [
+                                  Icon(
+                                    Icons.add,
+                                    size: 30,
+                                    color: Colors.white,
+                                  ),
+                                  SizedBox(
+                                    height: 5,
+                                  ),
+                                  AppText(
+                                    "My List",
+                                    size: 10,
+                                  )
+                                ],
+                              ),
+                              SizedBox(
+                                width: 40,
+                              ),
+                              Container(
+                                height: 40,
+                                width: 90,
+                                padding: EdgeInsets.only(left: 10, right: 10),
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(6),
+                                ),
+                                child: Row(
+                                  children: [
+                                    Icon(
+                                      CupertinoIcons.play_arrow_solid,
+                                      color: Colors.black,
+                                    ),
+                                    SizedBox(
+                                      width: 5,
+                                    ),
+                                    AppText(
+                                      "Play",
+                                      size: 18,
+                                      color: Colors.black,
+                                      weight: FontWeight.bold,
+                                    )
+                                  ],
+                                ),
+                              ),
+                              SizedBox(
+                                width: 40,
+                              ),
+                              Column(
+                                children: [
+                                  Icon(
+                                    Icons.info_outline,
+                                    size: 30,
+                                    color: Colors.white,
+                                  ),
+                                  SizedBox(
+                                    height: 5,
+                                  ),
+                                  AppText(
+                                    "Info",
+                                    size: 10,
+                                  )
+                                ],
+                              ),
+                              Expanded(child: Container()),
+                            ],
+                          ),
+                          SizedBox(
+                            height: 10,
                           ),
                         ],
                       ),
