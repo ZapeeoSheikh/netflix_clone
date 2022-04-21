@@ -5,6 +5,21 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return MaterialApp(
+      home: Scaffold(
+        body: Column(
+          children: [
+            Row(
+              children: [
+                Container(),
+                Expanded(child: Container()),
+                Icon(Icons.search),
+                Container(),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
