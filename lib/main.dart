@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:netflix_clone/homepage.dart';
+import 'package:netflix_clone/mainpage.dart';
 import 'package:netflix_clone/routes/routes.dart';
 import 'package:netflix_clone/start_page.dart';
 
@@ -16,11 +16,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       routes: {
         routes.start: (context) => StartPage(),
-        routes.home: (context) => HomePage(),
+        routes.home: (context) => MainPage(),
       },
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: HomePage(),
+        body: MainPage(),
       ),
     );
   }
