@@ -58,25 +58,21 @@ class _MainPageState extends State<MainPage> {
             BottomNavigationBarItem(
                 icon: Icon(
                   Icons.home_filled,
-
                 ),
                 label: "Home"),
             BottomNavigationBarItem(
                 icon: Icon(
                   CupertinoIcons.game_controller,
-
                 ),
                 label: "Games"),
             BottomNavigationBarItem(
                 icon: Icon(
                   Icons.video_library_outlined,
-
                 ),
                 label: "News & Hot"),
             BottomNavigationBarItem(
                 icon: Icon(
                   CupertinoIcons.arrow_down_circle,
-
                 ),
                 label: "Download"),
           ],
