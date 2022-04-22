@@ -11,237 +11,313 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  int selectedIndex = 0;
+  var names = [
+    "US TV Shows",
+    "PAK TV Shows",
+    "IND TV Shows",
+    "AUS TV Shows",
+    "NZ TV Shows",
+  ];
+  var bg = [
+    "bg1.jpg",
+    "bg2.jpg",
+    "bg3.jpg",
+    "bg4.jpg",
+    "bg5.jpg",
+  ];
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Stack(
-          children: [
-            Container(
-              width: MediaQuery.of(context).size.width,
-              height: 500,
-              decoration: BoxDecoration(
-                  image: DecorationImage(
-                      image: AssetImage("img/bbg.jpeg"), fit: BoxFit.cover)),
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          Container(
+            width: MediaQuery.of(context).size.width,
+            height: 500,
+            decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage("img/bbg.jpeg"), fit: BoxFit.cover)),
+            child: Container(
+              color: Colors.black.withOpacity(0.4), //======= Color Blur Layer
               child: Container(
-                color: Colors.black.withOpacity(0.4), //======= Color Blur Layer
-                child: Container(
-                  // Onto the Image items
-                  margin: EdgeInsets.only(left: 15, right: 15, top: 60),
-                  child: Column(
-                    children: [
-                      Row(
-                        // Top Layer of items
-                        children: [
-                          Container(
-                            height: 60,
-                            width: 50,
-                            decoration: BoxDecoration(
+                // Onto the Image items
+                margin: EdgeInsets.only(left: 15, right: 15, top: 60),
+                child: Column(
+                  children: [
+                    Row(
+                      // Top Layer of items
+                      children: [
+                        Container(
+                          height: 60,
+                          width: 50,
+                          decoration: BoxDecoration(
+                            // color: Colors.red,
+                            image: DecorationImage(
+                                image: AssetImage("img/small.png"),
+                                fit: BoxFit.cover),
+                          ),
+                        ), //================ Netflix logo
+                        Expanded(child: Container()),
+                        Icon(
+                          Icons.search,
+                          size: 30,
+                        ), //============== Search
+                        SizedBox(
+                          width: 25,
+                        ),
+                        Container(
+                          height: 30,
+                          width: 30,
+                          decoration: BoxDecoration(
                               // color: Colors.red,
                               image: DecorationImage(
-                                  image: AssetImage("img/small.png"),
+                                  image: AssetImage(
+                                    "img/me.jpeg",
+                                  ),
                                   fit: BoxFit.cover),
-                            ),
-                          ), //================ Netflix logo
-                          Expanded(child: Container()),
-                          Icon(
-                            Icons.search,
-                            size: 30,
-                          ), //============== Search
-                          SizedBox(
-                            width: 25,
+                              borderRadius: BorderRadius.circular(5)),
+                        ), //============Avatar
+                      ],
+                    ), // ================= Row 1st
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(left: 30),
+                      child: Row(
+                        children: [
+                          AppText(
+                            "TV Shows",
                           ),
-                          Container(
-                            height: 30,
-                            width: 30,
-                            decoration: BoxDecoration(
-                                color: Colors.red,
-                                borderRadius: BorderRadius.circular(5)),
-                          ), //============Avatar
+                          SizedBox(
+                            width: 40,
+                          ),
+                          AppText(
+                            "Movies",
+                          ),
+                          SizedBox(
+                            width: 40,
+                          ),
+                          AppText(
+                            "Categories",
+                          ),
+                          SizedBox(
+                            width: 5,
+                          ),
+                          IconButton(
+                            onPressed: () {},
+                            icon: Icon(Icons.arrow_drop_down),
+                          ),
                         ],
-                      ), // ================= Row 1st
-                      SizedBox(
-                        height: 20,
                       ),
-                      Container(
-                        margin: EdgeInsets.only(left: 30),
-                        child: Row(
+                    ),
+                    Expanded(child: Container()),
+                    Row(
+                      children: [
+                        Expanded(child: Container()),
+                        AppText(
+                          "Quickly   ",
+                          size: 10,
+                        ),
+                        AppText(
+                          "🔵",
+                          size: 4,
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        AppText(
+                          "Hearfelt   ",
+                          size: 10,
+                        ),
+                        AppText(
+                          "🔵",
+                          size: 4,
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        AppText(
+                          "Teen   ",
+                          size: 10,
+                        ),
+                        AppText(
+                          "🔵",
+                          size: 4,
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        AppText(
+                          "Ensemble   ",
+                          size: 10,
+                        ),
+                        AppText(
+                          "🔵",
+                          size: 4,
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        AppText(
+                          "Underdog   ",
+                          size: 10,
+                        ),
+                        AppText(
+                          "🔵",
+                          size: 4,
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        AppText(
+                          "TV   ",
+                          size: 10,
+                        ),
+                        Expanded(child: Container()),
+                      ],
+                    ), //================== Tags
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Row(
+                      children: [
+                        Expanded(child: Container()),
+                        Column(
                           children: [
-                            AppText(
-                              "TV Shows",
+                            Icon(
+                              Icons.add,
+                              size: 30,
+                              color: Colors.white,
                             ),
                             SizedBox(
-                              width: 40,
+                              height: 5,
                             ),
                             AppText(
-                              "Movies",
-                            ),
-                            SizedBox(
-                              width: 40,
-                            ),
-                            AppText(
-                              "Categories",
-                            ),
-                            SizedBox(
-                              width: 5,
-                            ),
-                            IconButton(
-                              onPressed: () {},
-                              icon: Icon(Icons.arrow_drop_down),
-                            ),
+                              "My List",
+                              size: 10,
+                            )
                           ],
                         ),
-                      ),
-                      Expanded(child: Container()),
-                      Row(
-                        children: [
-                          Expanded(child: Container()),
-                          AppText(
-                            "Quickly   ",
-                            size: 10,
+                        SizedBox(
+                          width: 40,
+                        ),
+                        Container(
+                          height: 40,
+                          width: 90,
+                          padding: EdgeInsets.only(left: 10, right: 10),
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(6),
                           ),
-                          AppText(
-                            "🔵",
-                            size: 4,
-                          ),
-                          SizedBox(
-                            width: 10,
-                          ),
-                          AppText(
-                            "Hearfelt   ",
-                            size: 10,
-                          ),
-                          AppText(
-                            "🔵",
-                            size: 4,
-                          ),
-                          SizedBox(
-                            width: 10,
-                          ),
-                          AppText(
-                            "Teen   ",
-                            size: 10,
-                          ),
-                          AppText(
-                            "🔵",
-                            size: 4,
-                          ),
-                          SizedBox(
-                            width: 10,
-                          ),
-                          AppText(
-                            "Ensemble   ",
-                            size: 10,
-                          ),
-                          AppText(
-                            "🔵",
-                            size: 4,
-                          ),
-                          SizedBox(
-                            width: 10,
-                          ),
-                          AppText(
-                            "Underdog   ",
-                            size: 10,
-                          ),
-                          AppText(
-                            "🔵",
-                            size: 4,
-                          ),
-                          SizedBox(
-                            width: 10,
-                          ),
-                          AppText(
-                            "TV   ",
-                            size: 10,
-                          ),
-                          Expanded(child: Container()),
-                        ],
-                      ), //================== Tags
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Row(
-                        children: [
-                          Expanded(child: Container()),
-                          Column(
+                          child: Row(
                             children: [
                               Icon(
-                                Icons.add,
-                                size: 30,
-                                color: Colors.white,
+                                CupertinoIcons.play_arrow_solid,
+                                color: Colors.black,
                               ),
                               SizedBox(
-                                height: 5,
+                                width: 5,
                               ),
                               AppText(
-                                "My List",
-                                size: 10,
+                                "Play",
+                                size: 18,
+                                color: Colors.black,
+                                weight: FontWeight.bold,
                               )
                             ],
                           ),
-                          SizedBox(
-                            width: 40,
-                          ),
-                          Container(
-                            height: 40,
-                            width: 90,
-                            padding: EdgeInsets.only(left: 10, right: 10),
-                            decoration: BoxDecoration(
+                        ),
+                        SizedBox(
+                          width: 40,
+                        ),
+                        Column(
+                          children: [
+                            Icon(
+                              Icons.info_outline,
+                              size: 30,
                               color: Colors.white,
-                              borderRadius: BorderRadius.circular(6),
                             ),
-                            child: Row(
-                              children: [
-                                Icon(
-                                  CupertinoIcons.play_arrow_solid,
-                                  color: Colors.black,
-                                ),
-                                SizedBox(
-                                  width: 5,
-                                ),
-                                AppText(
-                                  "Play",
-                                  size: 18,
-                                  color: Colors.black,
-                                  weight: FontWeight.bold,
-                                )
-                              ],
+                            SizedBox(
+                              height: 5,
                             ),
-                          ),
+                            AppText(
+                              "Info",
+                              size: 10,
+                            )
+                          ],
+                        ),
+                        Expanded(child: Container()),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          // All the top portion
+          Positioned(
+              top: 510,
+              child: Wrap(
+                children: List.generate(
+                  5,
+                  (index) => Column(
+                    children: [
+                      Row(
+                        children: [
                           SizedBox(
-                            width: 40,
+                            height: 40,
                           ),
-                          Column(
-                            children: [
-                              Icon(
-                                Icons.info_outline,
-                                size: 30,
-                                color: Colors.white,
-                              ),
-                              SizedBox(
-                                height: 5,
-                              ),
-                              AppText(
-                                "Info",
-                                size: 10,
-                              )
-                            ],
+                          AppText(
+                            names[index],
+                            weight: FontWeight.bold,
+                            size: 20,
+                            color: Colors.white,
                           ),
                           Expanded(child: Container()),
                         ],
                       ),
                       SizedBox(
                         height: 10,
+                      ),
+                      Container(
+                        height: 190,
+                        child: ListView.builder(
+                          itemCount: 5,
+                          scrollDirection: Axis.horizontal,
+                          itemBuilder: (BuildContext context, int index) =>
+                              InkWell(
+                            onTap: () {
+                              setState(() {
+                                selectedIndex = index + 1;
+                              });
+                            },
+                            child: Container(
+                              margin: EdgeInsets.only(left: 10),
+                              height: 180,
+                              width: MediaQuery.of(context).size.width / 3,
+                              decoration: BoxDecoration(
+                                // color: selectedIndex == index
+                                //     ? Colors.white
+                                //     : Colors.red,
+                                image: DecorationImage(
+                                    image: AssetImage("img/" + bg[index]),
+                                    fit: BoxFit.cover),
+                                borderRadius: BorderRadius.circular(20),
+                              ),
+                            ),
+                          ),
+                        ),
                       ),
                     ],
                   ),
                 ),
-              ),
-            ),
-          ],
-        ),
-      ],
+              )),
+        ],
+      ),
     );
   }
 }
