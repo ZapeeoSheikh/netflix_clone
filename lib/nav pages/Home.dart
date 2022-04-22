@@ -83,20 +83,20 @@ class _HomePageState extends State<HomePage> {
                       height: 20,
                     ),
                     Container(
-                      margin: EdgeInsets.only(left: 30),
+                      margin: EdgeInsets.only(left: 3),
                       child: Row(
                         children: [
                           AppText(
                             "TV Shows",
                           ),
                           SizedBox(
-                            width: 40,
+                            width: MediaQuery.of(context).size.width / 12,
                           ),
                           AppText(
                             "Movies",
                           ),
                           SizedBox(
-                            width: 40,
+                            width: MediaQuery.of(context).size.width / 12,
                           ),
                           AppText(
                             "Categories",
