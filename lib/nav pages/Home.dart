@@ -185,13 +185,13 @@ class _HomePageState extends State<HomePage> {
                         Expanded(child: Container()),
                         Column(
                           children: [
-                            Icon(
-                              Icons.add,
-                              size: 30,
-                              color: Colors.white,
-                            ),
-                            SizedBox(
-                              height: 5,
+                            IconButton(
+                              onPressed: () {},
+                              icon: Icon(
+                                Icons.add,
+                                size: 30,
+                                color: Colors.white,
+                              ),
                             ),
                             AppText(
                               "My List",
@@ -202,30 +202,33 @@ class _HomePageState extends State<HomePage> {
                         SizedBox(
                           width: 40,
                         ),
-                        Container(
-                          height: 40,
-                          width: 90,
-                          padding: EdgeInsets.only(left: 10, right: 10),
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(6),
-                          ),
-                          child: Row(
-                            children: [
-                              Icon(
-                                CupertinoIcons.play_arrow_solid,
-                                color: Colors.black,
-                              ),
-                              SizedBox(
-                                width: 5,
-                              ),
-                              AppText(
-                                "Play",
-                                size: 18,
-                                color: Colors.black,
-                                weight: FontWeight.bold,
-                              )
-                            ],
+                        InkWell(
+                          onTap: () {},
+                          child: Container(
+                            height: 40,
+                            width: 90,
+                            padding: EdgeInsets.only(left: 10, right: 10),
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(6),
+                            ),
+                            child: Row(
+                              children: [
+                                Icon(
+                                  CupertinoIcons.play_arrow_solid,
+                                  color: Colors.black,
+                                ),
+                                SizedBox(
+                                  width: 5,
+                                ),
+                                AppText(
+                                  "Play",
+                                  size: 18,
+                                  color: Colors.black,
+                                  weight: FontWeight.bold,
+                                )
+                              ],
+                            ),
                           ),
                         ),
                         SizedBox(
@@ -233,13 +236,13 @@ class _HomePageState extends State<HomePage> {
                         ),
                         Column(
                           children: [
-                            Icon(
-                              Icons.info_outline,
-                              size: 30,
-                              color: Colors.white,
-                            ),
-                            SizedBox(
-                              height: 5,
+                            IconButton(
+                              onPressed: () {},
+                              icon: Icon(
+                                Icons.info_outline,
+                                size: 30,
+                                color: Colors.white,
+                              ),
                             ),
                             AppText(
                               "Info",
@@ -271,11 +274,14 @@ class _HomePageState extends State<HomePage> {
                           SizedBox(
                             height: 40,
                           ),
-                          AppText(
-                            names[index],
-                            weight: FontWeight.bold,
-                            size: 20,
-                            color: Colors.white,
+                          Container(
+                            margin: EdgeInsets.only(left: 10),
+                            child: AppText(
+                              names[index],
+                              weight: FontWeight.bold,
+                              size: 20,
+                              color: Colors.white,
+                            ),
                           ),
                           Expanded(child: Container()),
                         ],
