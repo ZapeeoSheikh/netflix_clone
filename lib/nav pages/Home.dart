@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:netflix_clone/ListsData/assestlist.dart';
 
 import '../custom/AppText.dart';
 
@@ -12,20 +13,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int selectedIndex = 0;
-  var names = [
-    "US TV Shows",
-    "PAK TV Shows",
-    "IND TV Shows",
-    "AUS TV Shows",
-    "NZ TV Shows",
-  ];
-  var bg = [
-    "bg1.jpg",
-    "bg2.jpg",
-    "bg3.jpg",
-    "bg4.jpg",
-    "bg5.jpg",
-  ];
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -263,65 +251,67 @@ class _HomePageState extends State<HomePage> {
           ),
           // All the top portion
           Positioned(
-              top: 510,
-              child: Wrap(
-                children: List.generate(
-                  5,
-                  (index) => Column(
-                    children: [
-                      Row(
-                        children: [
-                          SizedBox(
-                            height: 40,
+            top: 510,
+            child: Wrap(
+              children: List.generate(
+                5,
+                (index) => Column(
+                  children: [
+                    Row(
+                      children: [
+                        SizedBox(
+                          height: 40,
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(left: 10),
+                          child: AppText(
+                            AssestList.names[index],
+                            weight: FontWeight.bold,
+                            size: 20,
+                            color: Colors.white,
                           ),
-                          Container(
+                        ),
+                        Expanded(child: Container()),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Container(
+                      height: 190,
+                      child: ListView.builder(
+                        itemCount: 5,
+                        scrollDirection: Axis.horizontal,
+                        itemBuilder: (BuildContext context, int index) =>
+                            InkWell(
+                          onTap: () {
+                            setState(() {
+                              selectedIndex = index + 1;
+                            });
+                          },
+                          child: Container(
                             margin: EdgeInsets.only(left: 10),
-                            child: AppText(
-                              names[index],
-                              weight: FontWeight.bold,
-                              size: 20,
-                              color: Colors.white,
-                            ),
-                          ),
-                          Expanded(child: Container()),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Container(
-                        height: 190,
-                        child: ListView.builder(
-                          itemCount: 5,
-                          scrollDirection: Axis.horizontal,
-                          itemBuilder: (BuildContext context, int index) =>
-                              InkWell(
-                            onTap: () {
-                              setState(() {
-                                selectedIndex = index + 1;
-                              });
-                            },
-                            child: Container(
-                              margin: EdgeInsets.only(left: 10),
-                              height: 180,
-                              width: MediaQuery.of(context).size.width / 3,
-                              decoration: BoxDecoration(
-                                // color: selectedIndex == index
-                                //     ? Colors.white
-                                //     : Colors.red,
-                                image: DecorationImage(
-                                    image: AssetImage("img/" + bg[index]),
-                                    fit: BoxFit.cover),
-                                borderRadius: BorderRadius.circular(20),
-                              ),
+                            height: 180,
+                            width: MediaQuery.of(context).size.width / 3,
+                            decoration: BoxDecoration(
+                              // color: selectedIndex == index
+                              //     ? Colors.white
+                              //     : Colors.red,
+                              image: DecorationImage(
+                                  image:
+                                      AssetImage("img/" + AssestList.bg[index]),
+                                  fit: BoxFit.cover),
+                              borderRadius: BorderRadius.circular(20),
                             ),
                           ),
                         ),
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
-              )),
+              ),
+            ),
+          ),
         ],
       ),
     );
