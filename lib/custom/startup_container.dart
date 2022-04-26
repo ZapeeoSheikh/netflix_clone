@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:netflix_clone/routes/routes.dart';
 
-class HomeContainer extends StatefulWidget {
-  const HomeContainer({Key? key}) : super(key: key);
+class StartUpContainer extends StatefulWidget {
+  const StartUpContainer({Key? key}) : super(key: key);
   @override
-  State<HomeContainer> createState() => _HomeContainerState();
+  State<StartUpContainer> createState() => _StartUpContainerState();
 }
 
-class _HomeContainerState extends State<HomeContainer> {
+class _StartUpContainerState extends State<StartUpContainer> {
   int index = 1;
   @override
   Widget build(BuildContext context) {
-    return InkWell(
+    return GestureDetector(
       onTap: () {
         // setState(() {
         //   index = 0;

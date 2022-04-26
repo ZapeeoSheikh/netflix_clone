@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       },
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: MainPage(),
+        body: StartPage(),
       ),
     );
   }

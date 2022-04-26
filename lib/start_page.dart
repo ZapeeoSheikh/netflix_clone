@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:netflix_clone/custom/home_container.dart';
+import 'package:netflix_clone/custom/startup_container.dart';
 
 class StartPage extends StatefulWidget {
   const StartPage({Key? key}) : super(key: key);
@@ -55,7 +55,7 @@ class _StartPageState extends State<StartPage> {
                 children: [
                   Column(
                     children: [
-                      HomeContainer(),
+                      StartUpContainer(),
                       SizedBox(
                         height: 10,
                       ),
@@ -70,7 +70,7 @@ class _StartPageState extends State<StartPage> {
                   ),
                   Column(
                     children: [
-                      HomeContainer(),
+                      StartUpContainer(),
                       SizedBox(
                         height: 10,
                       ),
@@ -92,7 +92,7 @@ class _StartPageState extends State<StartPage> {
                 children: [
                   Column(
                     children: [
-                      HomeContainer(),
+                      StartUpContainer(),
                       SizedBox(
                         height: 10,
                       ),
@@ -107,7 +107,7 @@ class _StartPageState extends State<StartPage> {
                   ),
                   Column(
                     children: [
-                      HomeContainer(),
+                      StartUpContainer(),
                       SizedBox(
                         height: 10,
                       ),
@@ -129,7 +129,7 @@ class _StartPageState extends State<StartPage> {
                 children: [
                   Column(
                     children: [
-                      HomeContainer(),
+                      StartUpContainer(),
                       SizedBox(
                         height: 10,
                       ),
@@ -144,7 +144,7 @@ class _StartPageState extends State<StartPage> {
                   ),
                   Column(
                     children: [
-                      HomeContainer(),
+                      StartUpContainer(),
                       SizedBox(
                         height: 10,
                       ),
