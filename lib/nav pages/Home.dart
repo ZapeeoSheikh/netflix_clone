@@ -283,11 +283,12 @@ class _HomePageState extends State<HomePage> {
                         itemCount: 5,
                         scrollDirection: Axis.horizontal,
                         itemBuilder: (BuildContext context, int index) =>
-                            InkWell(
+                            GestureDetector(
                           onTap: () {
-                            setState(() {
-                              selectedIndex = index + 1;
-                            });
+                            // setState(() {
+                            //   selectedIndex = index + 1;
+                            // });
+
                           },
                           child: Container(
                             margin: EdgeInsets.only(left: 10),
