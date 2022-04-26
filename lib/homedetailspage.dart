@@ -1,20 +1,18 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:netflix_clone/ListsData/assestlist.dart';
 import 'package:netflix_clone/routes/routes.dart';
 
-import '../custom/AppText.dart';
+import 'ListsData/assestlist.dart';
+import 'custom/AppText.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+class HomeDetailPage extends StatefulWidget {
+  const HomeDetailPage({Key? key}) : super(key: key);
 
   @override
-  _HomePageState createState() => _HomePageState();
+  _HomeDetailPageState createState() => _HomeDetailPageState();
 }
 
-class _HomePageState extends State<HomePage> {
-  int selectedIndex = 0;
-
+class _HomeDetailPageState extends State<HomeDetailPage> {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -25,7 +23,8 @@ class _HomePageState extends State<HomePage> {
             height: 500,
             decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage("img/bbg.jpeg"), fit: BoxFit.cover)),
+                    image: AssetImage("img/" + AssestList.bg[3]),
+                    fit: BoxFit.cover)),
             child: Container(
               color: Colors.black.withOpacity(0.4), //======= Color Blur Layer
               child: Container(
@@ -289,7 +288,7 @@ class _HomePageState extends State<HomePage> {
                             // setState(() {
                             //   selectedIndex = index + 1;
                             // });
-                            Navigator.pushNamed(context, routes.homedetail);
+                            Navigator.pushNamed(context, routes.home);
                           },
                           child: Container(
                             margin: EdgeInsets.only(left: 10),

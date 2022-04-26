@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:netflix_clone/homedetailspage.dart';
 import 'package:netflix_clone/mainpage.dart';
 import 'package:netflix_clone/routes/routes.dart';
 import 'package:netflix_clone/start_page.dart';
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
       routes: {
         routes.start: (context) => StartPage(),
         routes.home: (context) => MainPage(),
+        routes.homedetail: (context) => HomeDetailPage(),
       },
       debugShowCheckedModeBanner: false,
       home: Scaffold(
