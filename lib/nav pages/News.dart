@@ -14,7 +14,7 @@ class Newspage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                "Games in Netflix",
+                "News on Netflix",
                 style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
