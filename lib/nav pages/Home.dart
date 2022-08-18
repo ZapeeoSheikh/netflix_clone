@@ -17,11 +17,12 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    double mediawidth = MediaQuery.of(context).size.width;
     return SingleChildScrollView(
       child: Column(
         children: [
           Container(
-            width: MediaQuery.of(context).size.width,
+            width: mediawidth,
             height: 500,
             decoration: BoxDecoration(
                 image: DecorationImage(
@@ -47,9 +48,22 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ), //================ Netflix logo
                         Expanded(child: Container()),
-                        Icon(
-                          Icons.search,
-                          size: 30,
+                        IconButton(
+                          onPressed: () {
+                            ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                              content: Text('Search is not enabled'),
+                              // action: SnackBarAction(
+                              //   label: 'Undo',
+                              //   onPressed: () {
+                              //     // Some code to undo the change.
+                              //   },
+                              // ),
+                            ));
+                          },
+                          icon: Icon(
+                            Icons.search,
+                            size: mediawidth * 0.07,
+                          ),
                         ), //============== Search
                         SizedBox(
                           width: 25,
@@ -79,7 +93,7 @@ class _HomePageState extends State<HomePage> {
                             "TV Shows",
                           ),
                           SizedBox(
-                            width: MediaQuery.of(context).size.width / 12,
+                            width: mediawidth / 12,
                           ),
                           AppText(
                             "Movies",
@@ -175,7 +189,11 @@ class _HomePageState extends State<HomePage> {
                         Column(
                           children: [
                             IconButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                                  content: Text('Preview is not enabled'),
+                                ));
+                              },
                               icon: Icon(
                                 Icons.add,
                                 size: 30,

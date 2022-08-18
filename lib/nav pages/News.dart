@@ -26,4 +26,5 @@ class Newspage extends StatelessWidget {
         ),
       ),
     );
+  }
 }
