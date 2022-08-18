@@ -14,7 +14,7 @@ class DownloadPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                "Games in Netflix",
+                "Downloads in Netflix",
                 style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
