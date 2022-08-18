@@ -190,8 +190,9 @@ class _HomePageState extends State<HomePage> {
                           children: [
                             IconButton(
                               onPressed: () {
-                                ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                                  content: Text('Preview is not enabled'),
+                                ScaffoldMessenger.of(context)
+                                    .showSnackBar(SnackBar(
+                                  content: Text('Add is not enabled'),
                                 ));
                               },
                               icon: Icon(
@@ -209,8 +210,12 @@ class _HomePageState extends State<HomePage> {
                         SizedBox(
                           width: 40,
                         ),
-                        InkWell(
-                          onTap: () {},
+                        GestureDetector(
+                          onTap: () {
+                            ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                              content: Text('Preview is not enabled'),
+                            ));
+                          },
                           child: Container(
                             height: 40,
                             width: 90,
@@ -244,7 +249,12 @@ class _HomePageState extends State<HomePage> {
                         Column(
                           children: [
                             IconButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                ScaffoldMessenger.of(context)
+                                    .showSnackBar(SnackBar(
+                                  content: Text('Info is not enabled'),
+                                ));
+                              },
                               icon: Icon(
                                 Icons.info_outline,
                                 size: 30,
@@ -307,6 +317,9 @@ class _HomePageState extends State<HomePage> {
                             // setState(() {
                             //   selectedIndex = index + 1;
                             // });
+                            ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                              content: Text('Pressed !!'),
+                            ));
                             Navigator.pushNamed(context, routes.homedetail);
                           },
                           child: Container(
