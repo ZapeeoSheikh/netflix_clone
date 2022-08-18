@@ -29,7 +29,7 @@ class _HomeDetailPageState extends State<HomeDetailPage> {
               color: Colors.black.withOpacity(0.4), //======= Color Blur Layer
               child: Container(
                 // Onto the Image items
-                margin: EdgeInsets.only(left: 15, right: 15, top: 60),
+                // margin: EdgeInsets.only(left: 15, right: 15, top: 60),
                 child: Column(
                   children: [
                     Row(
