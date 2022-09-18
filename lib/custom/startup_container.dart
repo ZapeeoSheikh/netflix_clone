@@ -34,7 +34,7 @@ class _StartUpContainerState extends State<StartUpContainer> {
             ],
             borderRadius: BorderRadius.circular(5),
             image: DecorationImage(
-                image: AssetImage("img/me.jpeg"), fit: BoxFit.cover)),
+                image: AssetImage("img/me.jpeg"), fit: BoxFit.cover),),
       ),
     );
   }
